@@ -57,6 +57,11 @@ document.getElementById("bookNow").addEventListener('click', function () {
     } else {
         txt = "Your ticket is canceled";
     }
+    
+    document.getElementById('lorem').innerText=txt;
+    
+    
+    // document.getElementById("demo").innerHTML = txt;
 })
 
 
