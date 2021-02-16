@@ -29,7 +29,20 @@ function plusMinus(isIncrease, product) {
     // document.getElementById("subTotal").innerText='$ '+totalNewPrice;
     calculateTotal();
 }
+function calculateTotal() {
 
+    const firstInput = getInput('first');
+    const economyInput = getInput('economy');
+    const total = firstInput * 150 + economyInput * 100;
+    document.getElementById('subTotal').innerText = '$' + total;
+
+    const tax=Math.round(total*0.1);
+    document.getElementById('tax').innerText='$'+tax;
+
+    const inTotal=total+tax;
+    document.getElementById('inTotal').innerText='$'+inTotal;
+
+}
 
 
 
