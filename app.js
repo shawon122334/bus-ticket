@@ -36,11 +36,11 @@ function calculateTotal() {
     const total = firstInput * 150 + economyInput * 100;
     document.getElementById('subTotal').innerText = '$' + total;
 
-    const tax=Math.round(total*0.1);
-    document.getElementById('tax').innerText='$'+tax;
+    const tax = Math.round(total * 0.1);
+    document.getElementById('tax').innerText = '$' + tax;
 
-    const inTotal=total+tax;
-    document.getElementById('inTotal').innerText='$'+inTotal;
+    const inTotal = total + tax;
+    document.getElementById('inTotal').innerText = '$' + inTotal;
 
 }
 function getInput(product) {
@@ -49,7 +49,15 @@ function getInput(product) {
     const newOne = parseInt(one.value);
     return newOne;
 }
-
+document.getElementById("bookNow").addEventListener('click', function () {
+    var txt;
+    var r = confirm("Please confirm saying ok");
+    if (r == true) {
+        txt = "Your ticket is booked";
+    } else {
+        txt = "Your ticket is canceled";
+    }
+})
 
 
 
