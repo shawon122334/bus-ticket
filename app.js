@@ -43,6 +43,12 @@ function calculateTotal() {
     document.getElementById('inTotal').innerText='$'+inTotal;
 
 }
+function getInput(product) {
+
+    const one = document.getElementById(product + "ClassInput");
+    const newOne = parseInt(one.value);
+    return newOne;
+}
 
 
 
